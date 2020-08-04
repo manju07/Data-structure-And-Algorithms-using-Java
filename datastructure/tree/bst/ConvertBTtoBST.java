@@ -7,7 +7,7 @@ import java.util.List;
 import datastructure.tree.Node;
 
 /**
- * InnerConvertBTtoBST
+ * @author Manjunath Asundi 
  */
 class InnerConvertBTtoBST {
 

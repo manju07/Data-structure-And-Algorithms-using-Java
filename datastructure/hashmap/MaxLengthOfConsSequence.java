@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * InnerMaxLengthOfConsSequence
+ * @author Manjunath Asundi 
  */
 class InnerMaxLengthOfConsSequence {
     static int findMaxLengthOfConsecutiveSequence(int arr[]) {

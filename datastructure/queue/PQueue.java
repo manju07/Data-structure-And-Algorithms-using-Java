@@ -1,7 +1,9 @@
 package datastructure.queue;
 import java.util.PriorityQueue;
 import java.util.Queue;
-
+/**
+ * @author Manjunath Asundi 
+ */
 public class PQueue {
     public static void main(String args[]) {
         Queue<Integer> pq = new PriorityQueue<Integer>((x,y)->y-x);

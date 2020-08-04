@@ -1,7 +1,7 @@
 package algorithms.dynamicprogramming;
 
 /**
- * InnerLargestSumContiguous
+ * @author Manjunath Asundi 
  */
 class InnerLargestSumContiguous {
     static int largestContiguousSumArray(int arr[]) {

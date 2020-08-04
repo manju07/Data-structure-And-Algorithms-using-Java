@@ -3,7 +3,7 @@ package datastructure.tree.checktree;
 import datastructure.tree.Node;
 
 /**
- * InnerCheckCousin
+ * @author Manjunath Asundi 
  */
 class InnerCheckCousin {
 

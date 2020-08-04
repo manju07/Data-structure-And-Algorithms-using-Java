@@ -3,6 +3,9 @@ package algorithms.graph;
 import java.util.LinkedList;
 import java.util.Stack;
 
+/**
+ * @author Manjunath Asundi 
+ */
 public class TopologicalSorting {
 
     public static void topologicalSortingUtil(int v, Graph graph, boolean visited[], Stack<Integer> stack) {

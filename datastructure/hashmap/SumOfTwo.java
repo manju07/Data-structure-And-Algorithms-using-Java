@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * SumOfTwo
+ * @author Manjunath Asundi 
  */
 public class SumOfTwo {
 

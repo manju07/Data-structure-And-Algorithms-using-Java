@@ -1,7 +1,9 @@
 package datastructure.tree.converttree;
 
 import datastructure.tree.Node;
-
+/**
+ * @author Manjunath Asundi 
+ */
 class SumOfLeftTree {
     static int constructSumTree(Node<Integer> tree) {
         if (tree == null)

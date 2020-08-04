@@ -1,7 +1,7 @@
 package datastructure.heap;
 
 /**
- * InnerMinHeap
+ * @author Manjunath Asundi 
  */
 class InnerMinHeap {
 

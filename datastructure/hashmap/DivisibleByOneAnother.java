@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * InnerDivisibleByOneAnother
+ * @author Manjunath Asundi 
  */
 class InnerDivisibleByOneAnother {
     static Set<Integer> findSpecialNumbers(List<Integer> list) {

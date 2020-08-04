@@ -3,7 +3,7 @@ package datastructure.tree.bst;
 import datastructure.tree.Node;
 
 /**
- * InnerKthSmallest
+ * @author Manjunath Asundi 
  */
 class InnerKthSmallest {
     static int count = 0;

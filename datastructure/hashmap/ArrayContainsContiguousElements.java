@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * InnerArrayContainsContiguousElements
+ * @author Manjunath Asundi 
  */
 class InnerArrayContainsContiguousElements {
     static boolean isArrayContainsContiguousIntegers(int arr[]) {

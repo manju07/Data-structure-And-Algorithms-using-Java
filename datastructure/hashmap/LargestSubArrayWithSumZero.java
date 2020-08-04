@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * InnerLargestSubArrayWithSumZero
+ * @author Manjunath Asundi 
  */
 class InnerLargestSubArrayWithSumZero {
     static int printLargestSubArrayWithSumZero(int arr[]) {

@@ -2,6 +2,7 @@ package datastructure.tree;
 
 /**
  * SumOfLeafNodes
+ * @author Manjunath Asundi
  */
 public class SumOfLeafNodes {
 

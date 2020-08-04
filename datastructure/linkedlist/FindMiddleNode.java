@@ -1,7 +1,7 @@
 package datastructure.linkedlist;
 
 /**
- * Node structure
+ * @author Manjunath Asundi 
  */
 class Node {
     int data;

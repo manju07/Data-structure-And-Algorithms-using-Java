@@ -2,6 +2,9 @@ package algorithms.graph;
 
 import java.util.LinkedList;
 
+/**
+ * @author Manjunath Asundi 
+ */
 public class Graph {
     private int v;
     private LinkedList<LinkedList<Integer>> adjList;

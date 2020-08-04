@@ -2,6 +2,7 @@ package datastructure.tree;
 
 /**
  * Node
+ * @author Manjunath Asundi
  */
 public class Node<T> {
     public T data;

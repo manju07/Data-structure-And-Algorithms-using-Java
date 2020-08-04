@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * InnerPrintAllSubArraySumZero
+ * @author Manjunath Asundi 
  */
 class InnerPrintAllSubArraySumZero {
     static void printAllSubArrayWithSumZero(int arr[]) {

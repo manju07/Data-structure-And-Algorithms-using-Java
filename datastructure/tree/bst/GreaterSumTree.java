@@ -3,7 +3,7 @@ package datastructure.tree.bst;
 import datastructure.tree.Node;
 
 /**
- * InnerGreaterSumTree
+ * @author Manjunath Asundi 
  */
 class InnerGreaterSumTree {
     static int sum = 0;

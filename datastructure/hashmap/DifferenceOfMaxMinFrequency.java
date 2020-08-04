@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * InnerDifferenceOfMaxMinFrequency
+ * @author Manjunath Asundi 
  */
 class InnerDifferenceOfMaxMinFrequency {
 

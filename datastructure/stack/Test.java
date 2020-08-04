@@ -3,7 +3,7 @@ package datastructure.stack;
 import java.util.Stack;
 
 /**
- * Test
+ * @author Manjunath Asundi 
  */
 public class Test {
 

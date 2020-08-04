@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * InnerfindABCD
+ * @author Manjunath Asundi 
  */
 class InnerfindABCD {
     static void findFourElements(List<Integer> list) {

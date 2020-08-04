@@ -2,7 +2,9 @@ package datastructure.tree.converttree;
 
 import datastructure.tree.Node;
 
-
+/**
+ * @author Manjunath Asundi 
+ */
 class SumTree {
     static int constructSumTree(Node<Integer> tree) {
         if(tree == null) return 0;

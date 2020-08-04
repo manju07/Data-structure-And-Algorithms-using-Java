@@ -2,6 +2,9 @@ package datastructure.tree.checktree;
 
 import datastructure.tree.Node;
 
+/**
+ * @author Manjunath Asundi 
+ */
 class ChildrenSumOfTree {
     static int isRootChildrenSum(Node<Integer> tree) {
         if (tree == null)

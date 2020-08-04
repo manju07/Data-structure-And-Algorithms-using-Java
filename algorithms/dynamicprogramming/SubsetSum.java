@@ -1,7 +1,7 @@
 package algorithms.dynamicprogramming;
 
 /**
- * InnerSubsetSum
+ * @author Manjunath Asundi 
  */
 class InnerSubsetSum {
 

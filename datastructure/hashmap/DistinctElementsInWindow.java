@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * InnerDistinctElementsInWindow
+ * @author Manjunath Asundi 
  */
 class InnerDistinctElementsInWindow {
     static void printDistinctElementsWindow(int arr[], int k) {
