@@ -16,8 +16,7 @@ public class CountSubArraysSumLengthWithDistinctElements {
         for (int i = 0; i < n; i++) {
             while (j < n && !set.contains(arr[j]))
                 set.add(arr[j++]);
-            int count = ((j - i) * (j - i + 1)) / 2;
-            countSubArraysLength += count;
+            countSubArraysLength += ((j - i) * (j - i + 1)) / 2;
             set.remove(arr[i]);
         }
         return countSubArraysLength;
