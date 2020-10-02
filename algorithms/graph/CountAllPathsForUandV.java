@@ -7,7 +7,7 @@ import java.util.List;
  * @author Manjunath Asundi 
  * Count all paths of V and U
  */
-public class CountAllPaths {
+public class CountAllPathsForUandV {
 
     public static int dfs(int v, int u, List<LinkedList<Integer>> adjList, Boolean[] visited, int count) {
         if (v == u)
