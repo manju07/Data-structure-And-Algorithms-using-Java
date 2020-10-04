@@ -53,7 +53,6 @@ public class MinimumInitialVetices {
                 }
             }
         }
-        System.out.println("maxValue=" + maxValue + " maxValueI=" + maxValueI + " maxValueJ=" + maxValueJ);
         if (maxValue != -1)
             dfs(region, visited, maxValueI, maxValueJ, rows, cols);
     }
@@ -74,7 +73,6 @@ public class MinimumInitialVetices {
             List<LinkedList<Integer>> listOfList = data.getValue();
             for (LinkedList<Integer> list : listOfList) {
                 if (!visited[list.get(0)][list.get(1)]) {
-                    System.out.println("I=" + list.get(0) + " j=" + list.get(1));
                     dfs(region, visited, list.get(0), list.get(1), rows, cols);
                     minimumInitialVeticesCount++;
                 }
