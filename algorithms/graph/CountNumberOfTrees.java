@@ -19,9 +19,12 @@ public class CountNumberOfTrees {
     public static int findNumberOfTrees(Graph graph) {
         int totalTreesCount = 0;
         Boolean[] visited = graph.getVisited();
-        for (int i = 0; i < graph.getV(); i++)
-            if (visited[i] == false && ++totalTreesCount != 0)
+        for (int i = 0; i < graph.getV(); i++) {
+            if (visited[i] == false) {
                 dfs(i, graph, visited);
+                totalTreesCount++;
+            }
+        }
         return totalTreesCount;
     }
 
