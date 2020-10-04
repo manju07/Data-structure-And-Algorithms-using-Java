@@ -1,7 +1,12 @@
 package algorithms.graph;
 
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @author Manjunath Asundi 
@@ -9,26 +14,25 @@ import java.util.List;
  */
 public class MinimumInitialVetices {
 
-    public static List<LinkedList<Integer>> findMaxValueIndices(int region[][]) {
-        int maxValue = Integer.MIN_VALUE;
-        List<LinkedList<Integer>> maxValueIndices = new LinkedList<LinkedList<Integer>>();
+    public static Map<Integer, List<LinkedList<Integer>>> findMaxValueIndices(int region[][]) {
+        Map<Integer, List<LinkedList<Integer>>> map = new HashMap<>();
         for (int i = 0; i < region.length; i++) {
             for (int j = 0; j < region[i].length; j++) {
+                List<LinkedList<Integer>> linkedList;
                 LinkedList<Integer> list = new LinkedList<Integer>();
-                if (maxValue < region[i][j]) {
-                    maxValue = region[i][j];
-                    maxValueIndices = new LinkedList<LinkedList<Integer>>();
-                    list.add(i);
-                    list.add(j);
-                    maxValueIndices.add(list);
-                } else if (maxValue == region[i][j]) {
-                    list.add(i);
-                    list.add(j);
-                    maxValueIndices.add(list);
+                list.add(i);
+                list.add(j);
+                if (!map.containsKey(region[i][j])) {
+                    linkedList = new LinkedList<LinkedList<Integer>>();
+                    linkedList.add(list);
+                } else {
+                    linkedList = map.get(region[i][j]);
+                    linkedList.add(list);
                 }
+                map.put(region[i][j], linkedList);
             }
         }
-        return maxValueIndices;
+        return map;
     }
 
     public static void dfs(int region[][], Boolean[][] visited, int i, int j, int rows, int cols) {
@@ -38,8 +42,8 @@ public class MinimumInitialVetices {
         int maxValueI = -1, maxValueJ = -1;
         int maxValue = -1;
         for (int k = 0; k < colIndices.length; k++) {
-            int rc = i + rowIndices[i];
-            int cc = i + colIndices[j];
+            int rc = i + rowIndices[k];
+            int cc = j + colIndices[k];
             if (rc > -1 && rc < rows && cc > -1 && cc < cols && visited[rc][cc] == false
                     && region[rc][cc] <= region[i][j]) {
                 if (maxValue < region[rc][cc]) {
@@ -49,6 +53,7 @@ public class MinimumInitialVetices {
                 }
             }
         }
+        System.out.println("maxValue=" + maxValue + " maxValueI=" + maxValueI + " maxValueJ=" + maxValueJ);
         if (maxValue != -1)
             dfs(region, visited, maxValueI, maxValueJ, rows, cols);
     }
@@ -60,19 +65,28 @@ public class MinimumInitialVetices {
             for (int j = 0; j < cols; j++)
                 visited[i][j] = false;
 
-        List<LinkedList<Integer>> maxValueIndices = findMaxValueIndices(region);
-        for (LinkedList<Integer> linkedList : maxValueIndices) {
-            if (!visited[linkedList.get(0)][linkedList.get(1)]) {
-                dfs(region, visited, linkedList.get(0), linkedList.get(1), rows, cols);
-                minimumInitialVeticesCount++;
+        Map<Integer, List<LinkedList<Integer>>> map = findMaxValueIndices(region);
+        Map<Integer, List<LinkedList<Integer>>> linkedHashMap = map.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+                        (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+
+        for (Map.Entry<Integer, List<LinkedList<Integer>>> data: linkedHashMap.entrySet()) {
+            List<LinkedList<Integer>> listOfList = data.getValue();
+            for (LinkedList<Integer> list : listOfList) {
+                if (!visited[list.get(0)][list.get(1)]) {
+                    System.out.println("I=" + list.get(0) + " j=" + list.get(1));
+                    dfs(region, visited, list.get(0), list.get(1), rows, cols);
+                    minimumInitialVeticesCount++;
+                }
             }
         }
         return minimumInitialVeticesCount;
     }
 
     public static void main(String[] args) {
-        int region[][] = { { 1, 2, 3 }, { 2, 3, 1 }, { 1, 1, 1 } };
-        System.out.println("Minimum initial vertices count to traverse entire matrix -> "
-                + findMinimumInitialVertices(region, region.length, region[0].length));
+        int region[][][] = { { { 1, 2, 3 }, { 2, 3, 1 }, { 1, 1, 1 } }, { { 3, 3 }, { 1, 1 } } };
+        for (int[][] twoDArray : region)
+            System.out.println("Minimum initial vertices count to traverse entire matrix -> "
+                    + findMinimumInitialVertices(twoDArray, twoDArray.length, twoDArray[0].length));
     }
 }
