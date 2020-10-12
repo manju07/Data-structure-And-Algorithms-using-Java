@@ -1,7 +1,9 @@
-package algorithms.graph;
+package algorithms.graph.topological;
 
 import java.util.LinkedList;
 import java.util.Stack;
+
+import algorithms.graph.Graph;
 
 /**
  * @author Manjunath Asundi 
