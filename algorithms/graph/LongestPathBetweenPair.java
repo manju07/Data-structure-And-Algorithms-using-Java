@@ -14,7 +14,7 @@ class MaxLength {
     int maxCableLength = 0;
 }
 
-public class LongestPathBetween2Pairs {
+public class LongestPathBetweenPair {
 
     public static void findLongestPathBetween2Pairs(int source, LinkedList<LinkedList<Edge>> aList, Boolean[] visited,
             int prevLength, MaxLength maxLength) {
@@ -23,9 +23,9 @@ public class LongestPathBetween2Pairs {
         LinkedList<Edge> linkedList = aList.get(source);
         for (int i = 0; i < linkedList.size(); i++) {
             Edge edge = linkedList.get(i);
-            if (!visited[edge.destination]) {
-                lengthSum = prevLength + edge.weight;
-                findLongestPathBetween2Pairs(edge.destination, aList, visited, lengthSum, maxLength);
+            if (!visited[edge.getDestination()]) {
+                lengthSum = prevLength + edge.getWeight();
+                findLongestPathBetween2Pairs(edge.getDestination(), aList, visited, lengthSum, maxLength);
             }
             if (lengthSum > maxLength.maxCableLength)
                 maxLength.maxCableLength = lengthSum;
