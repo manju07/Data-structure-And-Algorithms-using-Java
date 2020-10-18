@@ -7,6 +7,8 @@ package algorithms.graph;
 public class Edge {
 
     private int source, destination, weight;
+    public Edge() {
+    }
     public Edge(int source, int destination, int weight) {
         this.source = source;
         this.destination = destination;
