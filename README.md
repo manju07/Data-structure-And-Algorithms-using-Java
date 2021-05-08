@@ -1,1 +1,1 @@
-Data structures and Algorithms implmented using java
+Data structures, Algorithms and Problem solved using Java.
