@@ -14,7 +14,6 @@ class Shared {
                 try {
                     wait();
                 } catch (Exception e) {
-                    // TODO: handle exception
                     e.printStackTrace();
                 }
             }
@@ -33,7 +32,7 @@ class Shared {
             try {
                 wait();
             } catch (Exception e) {
-                // TODO: handle exception
+                e.printStackTrace();
             }
             iteration2--;
         }

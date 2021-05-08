@@ -58,7 +58,6 @@ public class ParsingProgram {
             System.out.println("blankCount:" + blankCount + " commentsCount:" + commentsCount + " codeCount:"
                     + codeCount + " totalLinesCount:" + totalLinesCount);
         } catch (Exception e) {
-            // TODO: handle exception
             e.printStackTrace();
         }
     }
