@@ -3,6 +3,8 @@ package problemsolving;
 import java.util.HashMap;
 import java.util.Map;
 
+import util.MapUtil;
+
 // 10 X 10 
 
 // [ B C V B D ……..T
@@ -69,8 +71,6 @@ public class Sudoku {
             for (int j = 0; j < 3; j++)
                 findWords(matrix, map, minStrLength, maxStrLength, "", i, j, 3, 3);
 
-        for (Map.Entry<String, Integer> entry : map.entrySet())
-            System.out.println(entry.getKey() + " " + entry.getValue());
+        MapUtil.printMap(map);
     }
-
 }
