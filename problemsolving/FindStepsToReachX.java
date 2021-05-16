@@ -1,7 +1,7 @@
 package problemsolving;
 
 /**
- * Need to find the number of steps to reach X, they have given you 2 methods. one will increment current value by 1 
+ * Need to find the number of steps to reach X. they have given you 2 methods, one will increment current value by 1 
  * and another double the current value. Intial value will be 0. 
  * @author Manjunath Asundi
  */
