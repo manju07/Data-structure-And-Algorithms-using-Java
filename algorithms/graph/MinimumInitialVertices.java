@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  * @author Manjunath Asundi 
  * Find minimum initial vertices required to traverse entire matrix
  */
-public class MinimumInitialVetices {
+public class MinimumInitialVertices {
 
     public static Map<Integer, List<LinkedList<Integer>>> findMaxValueIndices(int region[][]) {
         Map<Integer, List<LinkedList<Integer>>> map = new HashMap<>();
