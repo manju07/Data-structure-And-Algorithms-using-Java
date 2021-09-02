@@ -1,7 +1,9 @@
-package algorithms.graph;
+package algorithms.graph.cycledetect;
+
+import algorithms.graph.Edge;
 
 /**
- * @author Manjunath Asundi
+ * @author Manjunath Asundi 
  * Union-Find algorithm to detect cycle in the graph
  */
 public class UnionFind {
@@ -33,7 +35,7 @@ public class UnionFind {
     }
 
     public static void main(String[] args) {
-        int V = 4, E = 3;
+        int V = 3, E = 3;
         Edge[] edges = new Edge[3];
         for (int i = 0; i < edges.length; i++)
             edges[i] = new Edge();
@@ -45,7 +47,7 @@ public class UnionFind {
         edges[1].setDestination(2);
 
         edges[2].setSource(2);
-        edges[2].setDestination(3);
+        edges[2].setDestination(1);
         if (isCycleDetected(V, E, edges))
             System.out.println("Cycle Detected");
         else
