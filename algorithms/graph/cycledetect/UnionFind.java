@@ -8,9 +8,7 @@ import algorithms.graph.Edge;
  */
 public class UnionFind {
     public static void union(int parent[], int u, int v) {
-        int u1 = find(parent, u);
-        int v1 = find(parent, v);
-        parent[u1] = v1;
+        parent[u] = v;
     }
 
     public static int find(int parent[], int v) {
