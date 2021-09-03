@@ -9,6 +9,7 @@ public class Graph {
     private int v;
     private LinkedList<LinkedList<Integer>> adjList;
     private Boolean visited[];
+    private LinkedList<LinkedList<Edge>> edgesList;
 
     public Graph() {
 
@@ -17,15 +18,21 @@ public class Graph {
     public Graph(int v) {
         this.v = v;
         adjList = new LinkedList<LinkedList<Integer>>();
-        for (int i = 0; i < v; i++)
-            adjList.add(new LinkedList<Integer>());
+        edgesList = new LinkedList<LinkedList<Edge>>();
         visited = new Boolean[this.v];
-        for (int i = 0; i < visited.length; i++)
+        for (int i = 0; i < v; i++) {
+            adjList.add(new LinkedList<Integer>());
+            edgesList.add(new LinkedList<Edge>());
             visited[i] = false;
+        }
     }
 
     public void addEdge(int u, int v) {
         adjList.get(u).add(v);
+    }
+
+    public void addEdge(int u, int v, int w) {
+        edgesList.get(u).add(new Edge(u, v, w));
     }
 
     public int getV() {
