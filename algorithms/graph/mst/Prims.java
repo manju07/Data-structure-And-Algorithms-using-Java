@@ -2,16 +2,13 @@ package algorithms.graph.mst;
 
 import java.util.LinkedList;
 import algorithms.graph.Edge;
+import algorithms.graph.Graph;
 
 /**
  * @author Manjunath Asundi 
  * Prims algorithm to find MST
  */
 public class Prims {
-
-    public static void addEdge(LinkedList<LinkedList<Edge>> list, int u, int v, int w) {
-        list.get(u).add(new Edge(u, v, w));
-    }
 
     public static int minKey(int keyValues[], Boolean mstSet[]) {
         int min = Integer.MAX_VALUE, index = -1;
@@ -60,30 +57,27 @@ public class Prims {
 
     public static void main(String[] args) {
         int v = 5;
+        Graph graph = new Graph(v);
 
-        LinkedList<LinkedList<Edge>> list = new LinkedList<LinkedList<Edge>>();
-        for (int i = 0; i < v; i++)
-            list.add(new LinkedList<Edge>());
+        graph.addEdge(0, 1, 2);
+        graph.addEdge(0, 3, 6);
 
-        addEdge(list, 0, 1, 2);
-        addEdge(list, 0, 3, 6);
+        graph.addEdge(1, 0, 2);
+        graph.addEdge(1, 2, 3);
+        graph.addEdge(1, 4, 5);
+        graph.addEdge(1, 3, 8);
 
-        addEdge(list, 1, 0, 2);
-        addEdge(list, 1, 2, 3);
-        addEdge(list, 1, 4, 5);
-        addEdge(list, 1, 3, 8);
+        graph.addEdge(2, 1, 3);
+        graph.addEdge(2, 4, 7);
 
-        addEdge(list, 2, 1, 3);
-        addEdge(list, 2, 4, 7);
+        graph.addEdge(3, 0, 6);
+        graph.addEdge(3, 1, 8);
+        graph.addEdge(3, 4, 9);
 
-        addEdge(list, 3, 0, 6);
-        addEdge(list, 3, 1, 8);
-        addEdge(list, 3, 4, 9);
+        graph.addEdge(4, 1, 5);
+        graph.addEdge(4, 3, 9);
+        graph.addEdge(4, 2, 7);
 
-        addEdge(list, 4, 1, 5);
-        addEdge(list, 4, 3, 9);
-        addEdge(list, 4, 2, 7);
-
-        primsForMST(list, v);
+        primsForMST(graph.getEdgesList(), graph.getV());
     }
 }
