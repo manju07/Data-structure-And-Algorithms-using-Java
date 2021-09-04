@@ -40,9 +40,7 @@ public class kruskalsMST {
 
     public static void KruskalMST(Edge[] edges, int V, int E) {
 
-        Arrays.sort(edges, (obj1, obj2) -> {
-            return obj1.getWeight() - obj2.getWeight();
-        });
+        Arrays.sort(edges, (obj1, obj2) -> obj1.getWeight() - obj2.getWeight());
 
         Subset subset[] = new Subset[V];
         for (int i = 0; i < V; i++) {
@@ -65,9 +63,8 @@ public class kruskalsMST {
         }
         System.out.println("Edges are -> ");
         ;
-        for (Edge edge : resultEdges) {
+        for (Edge edge : resultEdges) 
             System.out.println(edge.getSource() + " " + edge.getDestination() + " " + edge.getWeight());
-        }
         System.out.println("Total weight of MST is -> " + totalWeight);
     }
 
