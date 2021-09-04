@@ -51,4 +51,8 @@ public class Graph {
         for (int i = 0; i < visited.length; i++)
             visited[i] = false;
     }
+
+    public LinkedList<LinkedList<Edge>> getEdgesList() {
+        return edgesList;
+    }
 }
