@@ -11,9 +11,9 @@ import algorithms.graph.Graph;
  */
 public class dijkstraForShortestPath {
 
-    public static void printAllShortestPathsFromSource(int keyValue[]) {
-        for (int i = 1; i < keyValue.length; i++) 
-            System.out.println("vertex: " + i + " shortest path sum:" + keyValue[i]);
+    public static void printAllShortestPathsFromSource(int keyValue[], int sourceVertex) {
+        for (int i = 0; i < keyValue.length; i++) 
+            System.out.println("from source vertex: " + sourceVertex + " to  destination vertex: " + i + " shortest path sum:" + keyValue[i]);
     }
 
     public static int findMinValueKey(int keyValue[], Boolean spSet[]) {
@@ -27,14 +27,14 @@ public class dijkstraForShortestPath {
         return index;
     }
 
-    public static void primsForShortestPath(LinkedList<LinkedList<Edge>> list, int v) {
+    public static void primsForShortestPath(LinkedList<LinkedList<Edge>> list, int v, int sourceVertex) {
         Boolean spSet[] = new Boolean[v];
         int keyValue[] = new int[v];
         for (int i = 0; i < spSet.length; i++) {
             spSet[i] = false;
             keyValue[i] = Integer.MAX_VALUE;
         }
-        keyValue[0] = 0;
+        keyValue[sourceVertex] = 0;
         for (int i = 0; i < v; i++) {
             int vertex = findMinValueKey(keyValue, spSet);
             spSet[vertex] = true;
@@ -48,7 +48,7 @@ public class dijkstraForShortestPath {
                         keyValue[dest] = sum;
             }
         }
-        printAllShortestPathsFromSource(keyValue);
+        printAllShortestPathsFromSource(keyValue, sourceVertex);
     }
 
     public static void main(String[] args) {
@@ -85,6 +85,6 @@ public class dijkstraForShortestPath {
         graph.addEdge(4, 3, 9);
         graph.addEdge(4, 5, 10);
 
-        primsForShortestPath(graph.getEdgesList(), graph.getV());
+        primsForShortestPath(graph.getEdgesList(), graph.getV(), 1);
     }
 }
