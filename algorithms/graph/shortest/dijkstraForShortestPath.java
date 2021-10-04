@@ -9,7 +9,7 @@ import algorithms.graph.Graph;
  * @author Manjunath Asundi 
  * Find all shortest paths from source vertex to all other vertices using dijkstra's algorithm
  */
-public class dijkstraForShortestPath {
+public class DijkstraForShortestPath {
 
     public static void printAllShortestPathsFromSource(int keyValue[], int sourceVertex) {
         for (int i = 0; i < keyValue.length; i++) 
@@ -85,6 +85,10 @@ public class dijkstraForShortestPath {
         graph.addEdge(4, 3, 9);
         graph.addEdge(4, 5, 10);
 
-        primsForShortestPath(graph.getEdgesList(), graph.getV(), 1);
+        graph.addEdge(6, 8, 6);
+        graph.addEdge(6, 7, 1);
+        graph.addEdge(6, 5, 2);
+
+        primsForShortestPath(graph.getEdgesList(), graph.getV(), 0);
     }
 }
