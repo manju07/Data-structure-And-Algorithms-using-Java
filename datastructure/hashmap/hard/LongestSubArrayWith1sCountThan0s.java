@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author Manjunath Asundi
- * Find longest sub array count 1's one more than 0's count
+ * Find longest sub-array having count of 1's one more than count of 0's
+ * @author Manjunath Asundi 
  */
 public class LongestSubArrayWith1sCountThan0s {
 
@@ -27,7 +27,8 @@ public class LongestSubArrayWith1sCountThan0s {
     }
 
     public static void main(String[] args) {
-        int arr[][] = { { 0, 0, 0, 1, 1 }, { 0, 1, 1, 1, 0, 0 }, { 0, 1, 1, 0, 0, 1 }, { 1, 0, 0, 1, 0 } };
+        int arr[][] = { { 0, 0, 0, 1, 1 }, { 0, 1, 1, 1, 0, 0 }, { 0, 1, 1, 0, 0, 1 }, { 1, 0, 0, 1, 0 },
+                { 0, 0, 0, 0, 0 } };
         for (int[] is : arr)
             System.out.println("Longest sub array count 1's one more than 0's count "
                     + findLongestSubArrayLengthWith1sCountThan0s(is));
