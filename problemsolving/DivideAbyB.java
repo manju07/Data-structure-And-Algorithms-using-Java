@@ -38,5 +38,7 @@ public class DivideAbyB {
         System.out.println(divide(7, 5));
         System.out.println(divide(10, 3));
         System.out.println(divide(1, 97));
+        System.out.println(divide(4, 11));
+        System.out.println(divide(18, 13));
     }
 }
