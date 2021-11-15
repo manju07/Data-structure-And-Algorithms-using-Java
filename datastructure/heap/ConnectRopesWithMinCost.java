@@ -7,7 +7,6 @@ import java.util.Queue;
  * ConnectRopesWithMinCost
  * 
  * @apiNote Connect N ropes with minimum cost
- * @see https://www.geeksforgeeks.org/connect-n-ropes-minimum-cost/
  * @author Manjunath Asundi
  */
 public class ConnectRopesWithMinCost {

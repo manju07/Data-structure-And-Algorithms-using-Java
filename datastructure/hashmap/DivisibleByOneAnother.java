@@ -30,7 +30,6 @@ class InnerDivisibleByOneAnother {
 
 /**
  * DivisibleByOneAnother
- * link https://www.geeksforgeeks.org/divisibility-check/
  */
 public class DivisibleByOneAnother {
 

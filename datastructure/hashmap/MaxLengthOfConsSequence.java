@@ -26,7 +26,6 @@ class InnerMaxLengthOfConsSequence {
 
 /**
  * MaxLengthOfConsSequence
- * link https://www.geeksforgeeks.org/longest-increasing-consecutive-subsequence/
  */
 public class MaxLengthOfConsSequence {
     public static void main(String[] args) {

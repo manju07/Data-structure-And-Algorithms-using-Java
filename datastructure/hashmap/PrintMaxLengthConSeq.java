@@ -30,7 +30,6 @@ class InnerPrintMaxLengthConSeq {
 
 /**
  * PrintMaxLengthConSeq
- * link https://www.geeksforgeeks.org/printing-longest-increasing-consecutive-subsequence/
  */
 public class PrintMaxLengthConSeq {
 

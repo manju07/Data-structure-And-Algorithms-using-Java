@@ -33,7 +33,6 @@ class InnerDifferenceOfMaxMinFrequency {
 
 /**
  * DifferenceOfMaxMinFrequency link
- * https://www.geeksforgeeks.org/difference-between-highest-and-least-frequencies-in-an-array/
  */
 public class DifferenceOfMaxMinFrequency {
     public static void main(String[] args) {

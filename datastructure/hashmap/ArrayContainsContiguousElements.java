@@ -29,7 +29,6 @@ class InnerArrayContainsContiguousElements {
 
 /**
  * ArrayContainsContiguousElements
- * link https://www.geeksforgeeks.org/check-array-contains-contiguous-integers-duplicates-allowed/
  */
 public class ArrayContainsContiguousElements {
 

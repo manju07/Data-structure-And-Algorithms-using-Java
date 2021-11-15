@@ -2,7 +2,6 @@ package algorithms.graph.shortest;
 
 /**
  * @author Manjunath Asundi
- * @see https://www.geeksforgeeks.org/floyd-warshall-algorithm-dp-16/# 
  * Find all shortest paths from each vertex
  */
 public class Floydwarshall {

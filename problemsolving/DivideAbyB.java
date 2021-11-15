@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Divide A by B without using float data type and repeating floating point string should need to be enclosed by parenthesis
+ * Divide A by B without using float data type and repeating floating point
+ * string should need to be enclosed by parenthesis
+ * 
  * @author Manjunath Asundi
  */
 public class DivideAbyB {
@@ -40,5 +42,6 @@ public class DivideAbyB {
         System.out.println(divide(1, 97));
         System.out.println(divide(4, 11));
         System.out.println(divide(18, 13));
+        System.out.println(divide(10, 7));
     }
 }

@@ -1,38 +1,39 @@
 package datastructure.linkedlist;
 
 /**
- * @author Manjunath Asundi 
+ * Find middle node from linkedlist
+ * 
+ * @author Manjunath Asundi
  */
 class Node {
     int data;
     Node next;
+
     public Node(int data) {
         this.data = data;
         this.next = null;
-    }    
+    }
 }
 
-/**
- * FindMiddleNode
- */
 public class FindMiddleNode {
 
     static void findMiddleElement(Node list) {
-        Node fastPointer = list, slowPointer = list; 
-        while(fastPointer.next!=null && fastPointer!=null) {
+        Node fastPointer = list, slowPointer = list;
+        while (fastPointer.next != null && fastPointer != null) {
             slowPointer = slowPointer.next;
             fastPointer = fastPointer.next.next;
-        }  
-        System.out.println("Middle Element:"+ slowPointer.data);
+        }
+        System.out.println("Middle Element:" + slowPointer.data);
     }
 
     static void printList(Node list) {
-        while(list!=null) {
+        while (list != null) {
             System.out.print(list.data + " ");
             list = list.next;
         }
         System.out.println();
     }
+
     public static void main(String[] args) {
         Node list = new Node(1);
         list.next = new Node(2);

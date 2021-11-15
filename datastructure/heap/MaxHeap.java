@@ -1,7 +1,7 @@
 package datastructure.heap;
 
 /**
- * @author Manjunath Asundi
+ * @author Manjunath Asundi MinHeap
  */
 class InnerMaxHeap {
 
@@ -35,9 +35,6 @@ class InnerMaxHeap {
     }
 }
 
-/**
- * MinHeap
- */
 public class MaxHeap {
     public static void main(String[] args) {
         int arr[] = { 4, 10, 3, 5, 1 };

@@ -54,7 +54,6 @@ class InnerEmpMgrCount {
 
 /**
  * EmpMgrCount
- * link https://www.geeksforgeeks.org/find-number-of-employees-under-every-manager/
  */
 public class EmpMgrCount {
 

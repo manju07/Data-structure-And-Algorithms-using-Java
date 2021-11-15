@@ -3,7 +3,9 @@ package datastructure.hashmap.hard;
 import java.util.Arrays;
 
 /**
- * @author Manjunath Asundi Print all triplets those sum equal to K
+ * Print all triplets those sum equal to K
+ * 
+ * @author Manjunath Asundi
  */
 public class TripletsSumEqualToK {
     public static void findTripletsSumEqualToK(int arr[], int k) {

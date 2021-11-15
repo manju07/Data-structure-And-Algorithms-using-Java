@@ -29,7 +29,6 @@ class InnerfindABCD {
 
 /**
  * find A+B=C+D
- * Link https://www.geeksforgeeks.org/find-four-elements-a-b-c-and-d-in-an-array-such-that-ab-cd/
  */
 public class FindABCD {
     public static void main(String[] args) {

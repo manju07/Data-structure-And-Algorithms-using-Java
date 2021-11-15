@@ -3,7 +3,7 @@ package datastructure.tree.bst;
 import datastructure.tree.Node;
 
 /**
- * @author Manjunath Asundi 
+ * @author Manjunath Asundi
  */
 class InnerKthSmallest {
     static int count = 0;
@@ -23,7 +23,6 @@ class InnerKthSmallest {
 
 /**
  * KthSmallest link
- * https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/
  */
 public class KthSmallest {
     public static void main(String[] args) {
