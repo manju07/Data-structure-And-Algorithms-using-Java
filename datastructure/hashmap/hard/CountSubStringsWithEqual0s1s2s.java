@@ -2,11 +2,12 @@ package datastructure.hashmap.hard;
 
 import java.util.HashMap;
 import java.util.Map;
-import javafx.util.Pair;
+
+import util.Pair;
 
 /**
- * @author Manjunath Asundi
  * Count substrings having equal number of o's, 1's and 2's
+ * @author Manjunath Asundi
  */
 public class CountSubStringsWithEqual0s1s2s {
 
