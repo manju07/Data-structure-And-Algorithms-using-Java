@@ -3,11 +3,12 @@ package datastructure.tree.converttree;
 import datastructure.tree.Node;
 
 /**
- * @author Manjunath Asundi 
+ * @author Manjunath Asundi
  */
 class SumTree {
     static int constructSumTree(Node<Integer> tree) {
-        if(tree == null) return 0;
+        if (tree == null)
+            return 0;
         int temp = tree.data;
         tree.data = constructSumTree(tree.left) + constructSumTree(tree.right);
         return temp + tree.data;
@@ -20,15 +21,16 @@ class SumTree {
 public class ConverstToSumTree {
 
     static void printInPreOrder(Node<Integer> tree) {
-        if(tree == null) return;
-        System.out.print(tree.data+" ");
+        if (tree == null)
+            return;
+        System.out.print(tree.data + " ");
         printInPreOrder(tree.left);
         printInPreOrder(tree.right);
-    } 
+    }
 
     public static void main(String[] args) {
         Node<Integer> tree = new Node<Integer>(10);
-        tree.left = new Node<Integer>(-2); 
+        tree.left = new Node<Integer>(-2);
         tree.right = new Node<Integer>(6);
         tree.left.left = new Node<Integer>(8);
         tree.left.left.left = new Node<Integer>(10);

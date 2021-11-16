@@ -3,7 +3,7 @@ package datastructure.tree.constructtree;
 import datastructure.tree.Node;
 
 /**
- * @author Manjunath Asundi 
+ * @author Manjunath Asundi
  */
 class BuildTree {
     static int preIndex = 0;

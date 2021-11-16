@@ -29,7 +29,6 @@ class InnerGreaterSumTree {
 
 /**
  * GreaterSumTree
- * link https://www.geeksforgeeks.org/transform-bst-sum-tree/
  */
 public class GreaterSumTree {
     public static void main(String[] args) {

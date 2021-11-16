@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 /**
  * Parsing different computer programming language's program
+ * 
  * @author Manjunath Asundi
  */
 public class ParsingProgram {
@@ -18,8 +19,10 @@ public class ParsingProgram {
      */
     static class ParseData implements Runnable {
 
-        static int blankCount = 0, commentsCount = 0, codeCount = 0, totalLinesCount = 0, importCount = 0, variableDeclarationCount = 0;
+        static int blankCount = 0, commentsCount = 0, codeCount = 0, totalLinesCount = 0, importCount = 0,
+                variableDeclarationCount = 0;
         static String fileContent = null;
+
         public ParseData(String data) {
             ParseData.fileContent = data;
         }
@@ -51,9 +54,10 @@ public class ParsingProgram {
                     }
                     commentsCount++;
                 } else {
-                    if(line.startsWith("import")) {
+                    if (line.startsWith("import")) {
                         importCount++;
-                    } else if(line.startsWith("int") || line.startsWith("float") || line.startsWith("char") || line.startsWith("String"))
+                    } else if (line.startsWith("int") || line.startsWith("float") || line.startsWith("char")
+                            || line.startsWith("String"))
                         variableDeclarationCount++;
                     codeCount++;
                 }
@@ -64,7 +68,6 @@ public class ParsingProgram {
         }
     }
 
-
     public static void main(String[] args) {
         ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(20);
         try {
@@ -73,9 +76,8 @@ public class ParsingProgram {
             for (int i = 0; i < filesList.length; i++) {
                 if (filesList[i].endsWith(".java")) {
                     System.out.println(filesList[i]);
-                    String data = Files
-                            .lines(Paths.get(
-                                    "/Users/m0a07xh/Projects/Data-structure-And-Algorithms-using-Java/files/" + filesList[i]))
+                    String data = Files.lines(Paths.get(
+                            "/Users/m0a07xh/Projects/Data-structure-And-Algorithms-using-Java/files/" + filesList[i]))
                             .collect(Collectors.joining(System.lineSeparator()));
                     // System.out.println(data);
                     executor.execute(new ParseData(data));
@@ -84,8 +86,8 @@ public class ParsingProgram {
             executor.shutdown();
             while (!executor.isTerminated()) {
             }
-            System.out.println("blankCount:" + ParseData.blankCount + " commentsCount:" + ParseData.commentsCount + " codeCount:"
-                    + ParseData.codeCount + " totalLinesCount:" + ParseData.totalLinesCount);
+            System.out.println("blankCount:" + ParseData.blankCount + " commentsCount:" + ParseData.commentsCount
+                    + " codeCount:" + ParseData.codeCount + " totalLinesCount:" + ParseData.totalLinesCount);
         } catch (Exception e) {
             e.printStackTrace();
         }

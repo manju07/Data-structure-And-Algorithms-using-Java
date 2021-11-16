@@ -3,7 +3,9 @@ package datastructure.tree.constructtree;
 import datastructure.tree.Node;
 
 /**
- * @author Manjunath Asundi 
+ * Given In And Preorder, print post order.
+ * 
+ * @author Manjunath Asundi
  */
 class ConstructTree {
     static Node<Integer> buildTree(int inOrder[], int levelOrder[], int inStart, int inEnd) {
@@ -37,9 +39,6 @@ class ConstructTree {
     }
 }
 
-/**
- * InAndPreorder
- */
 public class InAndLevel {
     public static void main(String[] args) {
         int inOrder[] = { 4, 8, 10, 12, 14, 20, 22 };

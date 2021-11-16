@@ -7,6 +7,7 @@ import java.util.List;
 import datastructure.tree.Node;
 
 /**
+ * Convert BT to BST
  * @author Manjunath Asundi 
  */
 class InnerConvertBTtoBST {
@@ -43,10 +44,7 @@ class InnerConvertBTtoBST {
     }
 }
 
-/**
- * ConvertBTtoBST
- * link https://www.geeksforgeeks.org/binary-tree-to-binary-search-tree-conversion/
- */
+
 public class ConvertBTtoBST {
     public static void main(String[] args) {
         Node<Integer> tree = new Node<Integer>(10);

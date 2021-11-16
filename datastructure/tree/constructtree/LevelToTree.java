@@ -3,15 +3,17 @@ package datastructure.tree.constructtree;
 import datastructure.tree.Node;
 
 /**
- * @author Manjunath Asundi 
+ * @author Manjunath Asundi
  */
 class ConstructFromLevelOrder {
     static int levelIndex = 0;
+
     static Node<Integer> constructTreeFromLevelOrder(int levelOrder[], int level) {
-        if(level >= levelOrder.length) return null;
+        if (level >= levelOrder.length)
+            return null;
         Node<Integer> tNode = new Node<Integer>(levelOrder[level]);
-        tNode.left = constructTreeFromLevelOrder(levelOrder, (level*2)+1);
-        tNode.right = constructTreeFromLevelOrder(levelOrder, (level*2)+2);
+        tNode.left = constructTreeFromLevelOrder(levelOrder, (level * 2) + 1);
+        tNode.right = constructTreeFromLevelOrder(levelOrder, (level * 2) + 2);
         return tNode;
     }
 

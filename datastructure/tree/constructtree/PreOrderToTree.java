@@ -7,8 +7,9 @@ class Index {
 }
 
 /**
- * @author Manjunath Asundi 
  * Construct tree from given preorder
+ * 
+ * @author Manjunath Asundi
  */
 public class PreOrderToTree {
 

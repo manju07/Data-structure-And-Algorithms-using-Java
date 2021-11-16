@@ -25,7 +25,7 @@ class Shared {
     }
 
     public synchronized void deposit(int depositMoney) {
-        while (iteration2 != 0 && iteration!=0) {
+        while (iteration2 != 0 && iteration != 0) {
             amount += depositMoney;
             System.out.println("Amount deposited " + depositMoney + " succeessfully, balance amount:" + amount);
             notify();
