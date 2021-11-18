@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Find Maximum sum of subarray having unique elements
+ * Find Maximum sum of contiguous subarray having unique elements
  * 
  * @author Manjunath Asundi
  */
