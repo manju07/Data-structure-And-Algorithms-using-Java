@@ -3,6 +3,7 @@ package datastructure.tree.checktree;
 import datastructure.tree.Node;
 
 /**
+ * Check are they cousins in the tree
  * @author Manjunath Asundi 
  */
 class InnerCheckCousin {
