@@ -44,21 +44,10 @@ public class Deadlock {
 
         SharedObject1 so1 = new SharedObject1();
         SharedObject2 so2 = new SharedObject2();
-        Thread t1 = new Thread(new Runnable() {
+        Thread t1 = new Thread(() -> so1.method1(so1, so2));
 
-            @Override
-            public void run() {
-                so1.method1(so1, so2);
-            }
-        });
+        Thread t2 = new Thread(() -> so2.method2(so1, so2));
 
-        Thread t2 = new Thread(new Runnable() {
-
-            @Override
-            public void run() {
-                so2.method2(so1, so2);
-            }
-        });
         t1.start();
         try {
             // t1.join();
