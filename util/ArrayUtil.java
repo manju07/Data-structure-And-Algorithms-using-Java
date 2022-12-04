@@ -15,7 +15,7 @@ public class ArrayUtil {
         System.out.println();
     }
 
-    public static void printList(List list) {
+    public static <T> void printList(List<T> list) {
         for (Object object : list)
             System.out.print(object + " ");
         System.out.println();

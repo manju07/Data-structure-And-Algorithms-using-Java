@@ -30,7 +30,7 @@ public class Pair<T, U> {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Pair<T,U> other = (Pair) obj;
+        Pair<T,U> other = (Pair<T,U>) obj;
         if (t1 == null) {
             if (other.t1 != null)
                 return false;
