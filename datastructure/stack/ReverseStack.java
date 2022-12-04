@@ -4,10 +4,11 @@ import java.util.Stack;
 
 /**
  * Reverse stack without using extra memory
+ * 
  * @category Stack
  * @author Manjunath Asundi
  */
-public class RevereseStack {
+public class ReverseStack {
 
     public static void reverse(Stack<Integer> stack) {
         if (stack.isEmpty())
@@ -35,8 +36,8 @@ public class RevereseStack {
         stack.push(1);
         reverse(stack);
         System.out.print("After reversing stack: ");
-        while (!stack.isEmpty()) {
+        while (!stack.isEmpty())
             System.out.print(stack.pop() + " ");
-        }
+        System.out.println();
     }
 }
