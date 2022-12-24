@@ -7,10 +7,16 @@ import java.util.List;
  * 
  * @author Manjunath Asundi
  */
-public class ArrayUtil {
+public class ArrayUtil<T extends Number> {
 
     public static void printArray(int arr[]) {
         for (int data : arr)
+            System.out.print(data + " ");
+        System.out.println();
+    }
+
+    public static <T> void printArray(List<T> resultArr) {
+        for (T data : resultArr)
             System.out.print(data + " ");
         System.out.println();
     }
