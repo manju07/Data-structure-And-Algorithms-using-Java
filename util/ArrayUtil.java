@@ -46,6 +46,26 @@ public class ArrayUtil<T extends Number> {
     }
 
     /**
+     * Generate integer array of size range and each element between 1 to range
+     * 
+     * @param range elements value will be between 1 to range
+     * @return int array
+     */
+    public static int[] constructArrayWithinRange(int range) {
+        Set<Integer> set = new HashSet<Integer>();
+        int[] arr = new int[range];
+        int index = 0;
+        while (index < range) {
+            int data = AlgoUtils.random(range) + 1;
+            if (!set.contains(data)) {
+                arr[index++] = data;
+                set.add(data);
+            }
+        }
+        return arr;
+    }
+
+    /**
      * Generate random integer array of size between 5 and 10
      * and value will be in range of 0 to 15
      * 
