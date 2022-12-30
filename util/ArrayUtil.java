@@ -17,6 +17,18 @@ public class ArrayUtil<T extends Number> {
         System.out.println();
     }
 
+    /**
+     * @apiNote Print integer array
+     * @param printString print the string to console before arr[] 
+     * @param arr integer array, it's printed after printString
+     */
+    public static void printArray(String printString, int arr[]) {
+        System.out.println(printString);
+        for (int data : arr)
+            System.out.print(data + " ");
+        System.out.println();
+    }
+
     public static <T> void printArray(List<T> resultArr) {
         for (T data : resultArr)
             System.out.print(data + " ");
@@ -57,6 +69,27 @@ public class ArrayUtil<T extends Number> {
         int index = 0;
         while (index < range) {
             int data = AlgoUtils.random(range) + 1;
+            if (!set.contains(data)) {
+                arr[index++] = data;
+                set.add(data);
+            }
+        }
+        return arr;
+    }
+
+    /**
+     * Generate random integer array based on length and elements range
+     * 
+     * @param lengthBound Array length
+     * @param valuesBound elements value bound
+     * @return int array
+     */
+    public static int[] constructArrayByLengthAndValueBound(int lengthBound, int valuesBound) {
+        Set<Integer> set = new HashSet<Integer>();
+        int[] arr = new int[lengthBound];
+        int index = 0;
+        while (index < lengthBound) {
+            int data = AlgoUtils.random(valuesBound) + 1;
             if (!set.contains(data)) {
                 arr[index++] = data;
                 set.add(data);
