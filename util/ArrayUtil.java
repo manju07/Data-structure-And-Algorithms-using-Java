@@ -11,6 +11,24 @@ import java.util.Set;
  */
 public class ArrayUtil<T extends Number> {
 
+    public static void printArrayWithIndex(int arr[]) {
+        System.out.print("Index ");
+        for (int i = 0; i < arr.length; i++) {
+            if (i != arr.length - 1)
+                System.out.print(i + ", ");
+            else
+                System.out.print(i);
+        }
+        System.out.print("\nArray ");
+        for (int i = 0; i < arr.length; i++) {
+            if (i != arr.length - 1)
+                System.out.print(arr[i] + ", ");
+            else
+                System.out.print(arr[i]);
+        }
+        System.out.println();
+    }
+
     public static void printArray(int arr[]) {
         for (int data : arr)
             System.out.print(data + " ");
@@ -19,8 +37,8 @@ public class ArrayUtil<T extends Number> {
 
     /**
      * @apiNote Print integer array
-     * @param printString print the string to console before arr[] 
-     * @param arr integer array, it's printed after printString
+     * @param printString print the string to console before arr[]
+     * @param arr         integer array, it's printed after printString
      */
     public static void printArray(String printString, int arr[]) {
         System.out.println(printString);
