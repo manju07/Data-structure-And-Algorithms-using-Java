@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * @apiNote Find nth Fibbonacci number by Dynamic programming 
  * @author Manjunath Asundi
- * Find nth Fibbonacci number by Dynamic programming 
  */
 public class Fibbonacci {
     public static int fibbonacciOfN(int n, Map<Integer, Integer> map) {

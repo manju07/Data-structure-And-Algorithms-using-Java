@@ -1,9 +1,9 @@
 package algorithms.dynamicprogramming;
 
 /**
- * @author Manjunath Asundi 
- * Find nth ugly number which is prime factor of 2, 3 or 5
+ * @apiNote Find nth ugly number which is prime factor of 2, 3 or 5
  * Series 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 14, 15 ..... 
+ * @author Manjunath Asundi 
  */
 public class UglyNumber {
     static int uglyNumbers[] = new int[100];
