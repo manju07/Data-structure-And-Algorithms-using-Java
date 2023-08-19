@@ -12,8 +12,8 @@ public class AlgoUtils {
 
     /**
      * @apiNote Return random value between o to bound range
-     * @param bound
-     * @return random value between 0 to bound range
+     * @param bound random value between 0 to bound range
+     * @return integer value
      */
     public static int random(int bound) {
         return new Random().nextInt(bound);
