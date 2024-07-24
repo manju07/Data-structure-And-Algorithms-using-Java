@@ -9,9 +9,10 @@ class Shared {
 
     public synchronized void withDraw(int withDrawMoney) {
         while (iteration != 0) {
-            if (amount < withDrawMoney) {
+            while (amount < withDrawMoney) {
                 System.out.println("Balance is less, wait for deposit");
                 try {
+                    notify();
                     wait();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -21,6 +22,7 @@ class Shared {
             System.out.println("Amount withdrawn " + withDrawMoney + " succeessfully, balance amount:" + amount);
             notify();
             iteration--;
+            withDrawMoney += 30;
         }
     }
 
@@ -59,7 +61,7 @@ public class InterThreadCommunication {
 
             @Override
             public void run() {
-                s1.deposit(120);
+                s1.deposit(50);
             }
         });
         t1.start();
